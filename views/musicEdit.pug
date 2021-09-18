@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  form(method="POST", action="/music/edit/" + musics._id)
+    .form-group.mt-5
+        label(for='name') Musiqa nomi
+        input#name.form-control(type='text' name="name" value=musics.name)
+    .form-group
+        label(for='singer') Qo`shiqchi
+        input#singer.form-control(type='text' name="singer" value=musics.singer)
+    .form-group
+        label(for='comment') Password
+        input#comment.form-control(type='text ' name="comment" value=musics.comment)
+   
+    button.btn.btn-primary(type='submit') Yuborish
+

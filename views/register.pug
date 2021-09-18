@@ -1,0 +1,22 @@
+extends layout 
+
+block content 
+        h1= title
+        form(method="POST" action="/register")
+            .form-group.mt-4
+                label(for='name') Ismingizni kiriting
+                input#name.form-control(type='text' name="name")
+            .form-group
+                label(for='username') Usernamingizni kiriting
+                input#username.form-control(type='text' name="username")
+            .form-group
+                label(for='email') Emailingizni Kiriting
+                input#email.form-control(type='text' name="email")
+            .form-group
+                label(for='password') Parolingizni kiriting
+                input#password.form-control(type='password' name="password")
+            .form-group
+                label(for='password2') Parolingizni tasdiqlang
+                input#password2.form-control(type='password' name="password2")
+            
+            button.btn.btn-primary(type='submit') Ro`yhatdan o`tish
